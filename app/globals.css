@@ -38,4 +38,29 @@
   
 
 }
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+    font-family: var(--font-orbitron);
+  }
+}
+@layer components {
+  .hoverEffect {
+    @apply hover:scale-105 hover:shadow-lg;
+  }
+}
+@layer utilities {
+  .bg-shop-background {
+    background-color: var(--color-shop-background);
+  }
+  .text-heading {
+    color: var(--color-heading);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+}
+button{
 
+  @apply hover:cursor-pointer;
+}
