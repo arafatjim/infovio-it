@@ -7,4 +7,5 @@ export const HeaderData=[
     {title:"Services",href:"/services"},
     {title:"Contact",href:"/contact"},
     {title:"Hot Deals",href:"/hot-deals"},
+    
 ];
