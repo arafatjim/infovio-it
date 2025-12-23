@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SocialMedia from './socialMedia';
 import { useOutsideClick } from '@/hooks/useOutsideCLick';
+import SignIn from './signIn';
+
 interface SideMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -24,14 +26,16 @@ const SideMunu:FC<SideMenuProps> = ({isOpen,onClose}) => {
       </button>
       </div>
 
-      <div className='flex flex-col gap-6 mt-4 ml-6 text-white/70 font-semibold text-normal'>
+      <div className='flex flex-col gap-2 mt-2 ml-6 text-white/70 font-semibold text-normal'>
       {HeaderData?.map((item)=>(
         <Link href={item?.href} key={item?.title} className={` hover:text-logo-primary hoverEffect ${pathname === item?.href && 'text-logo-primary'}`} onClick={onClose} >
           {item?.title}
         </Link>
       ))}
       </div>
-      
+     <div className='ml-6 mt-2'>
+       <SignIn />
+     </div>
       <div className='text-white/70 mt-4 ml-6'>
         <SocialMedia />
       </div>

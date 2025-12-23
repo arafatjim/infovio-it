@@ -4,13 +4,14 @@ import "./globals.css";
 import Header from "@/components/ui/header";
 import Footer from "./footer";
 
+import { ClerkProvider } from '@clerk/nextjs';
 
 
 
 
 export const metadata: Metadata = {
-  title: "Flipside IT",
-  description: "Flip, Solve, Transform IT Solutions",
+  title: "PixelBuy ",
+  description: "Your Ultimate Online Tech Store",
 };
 
 export default function RootLayout({
@@ -19,7 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <ClerkProvider>
+      <html lang="en">
       <body className="font-orbitron font-medium antialiased px-2"
         
       >
@@ -28,5 +30,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    </ClerkProvider>
   );
 }
